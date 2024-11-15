@@ -53,7 +53,7 @@ const PinScreen = () => {
         fontFamily={FONTS.Medium}
         style={styles.mainContainer}
       >
-        Set up Groww PIN
+        Set up TaskTic PIN
       </CustomText>
       <CustomText style={styles.subText}>
         To keep your finances secure, we'll ask for this PIN every time you open

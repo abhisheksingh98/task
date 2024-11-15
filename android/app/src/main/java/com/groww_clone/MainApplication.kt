@@ -1,4 +1,4 @@
-package com.groww_clone
+package com.taskTic
 
 import android.app.Application
 import com.facebook.react.PackageList

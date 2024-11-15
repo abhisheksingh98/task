@@ -25,7 +25,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'groww_clone' do
+target 'taskTic' do
   config = use_native_modules!
 
   use_react_native!(
@@ -39,7 +39,7 @@ target 'groww_clone' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'groww_cloneTests' do
+  target 'taskTicTests' do
     inherit! :complete
     # Pods for testing
   end

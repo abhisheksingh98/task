@@ -66,10 +66,10 @@ const ConfirmPinScreen = ({ route }: any) => {
         fontFamily={FONTS.Medium}
         style={styles.mainContainer}
       >
-        Confirm your Groww PIN
+        Confirm your TaskTic PIN
       </CustomText>
       <CustomText style={styles.subText}>
-        Re-enter your Groww PIN for confimation.
+        Re-enter your TaskTic PIN for confimation.
       </CustomText>
       <OTPInput
         otpValues={otpValues}

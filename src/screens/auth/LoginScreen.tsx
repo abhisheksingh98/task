@@ -26,12 +26,6 @@ const LoginScreen: FC = () => {
   return (
     <CustomSafeAreaView>
       <View style={styles.container}>
-        <CustomText variant="h1" fontFamily={FONTS.Medium}>
-          Together we Groww
-        </CustomText>
-        <CustomText variant="h7" style={styles.subText} fontFamily={FONTS.Bold}>
-          Invest • Pay • Loans
-        </CustomText>
         <View style={styles.imgContainer}>
           <Image
             style={styles.img}

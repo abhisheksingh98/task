@@ -47,10 +47,10 @@ export const useCustomTheme = (): Theme => {
   const scheme = useColorScheme();
   if (currentTheme) {
     //according to user preference
-    return currentTheme === "dark" ? darkTheme : lightTheme;
+    return currentTheme === "dark" ? darkTheme : darkTheme;
   } else {
     //according to os preference
-    return scheme === "dark" ? darkTheme : lightTheme;
+    return scheme === "dark" ? darkTheme : darkTheme;
   }
 };
 

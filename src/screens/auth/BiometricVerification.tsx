@@ -107,7 +107,7 @@ const BiometricVerification: FC<BiometricProp> = ({ onForgotPin }) => {
       <View style={styles.container}>
         <Image source={Logo} style={styles.logo} />
         <CustomText variant="h6" fontFamily={FONTS.Bold}>
-          Enter Groww PIN
+          Enter TaskTic PIN
         </CustomText>
         <View style={styles.emailContainer}>
           <CustomText style={styles.subText}>{user?.email}</CustomText>

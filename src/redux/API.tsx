@@ -12,16 +12,6 @@ export const SOCKET_URL =
 export const TRADINGVIEW_WEB_URI =
   Platform.OS == "ios" ? `http://localhost:3001/` : `http://10.0.2.2:3001/`;
 
-// FOR PRODUCTION UPDATE THESE DEPLOYMENT URI and CREATE BUILD
-// or you can setup more automation using like NODE__DEV or config env
-// if you want more flexibility
-
-// export const BASE_URL = "http://xxx_your_deployement_domain_xxx.elasticbeanstalk.com";
-// export const SOCKET_URL = "http://xxx_your_deployement_domain_xxx.elasticbeanstalk.com:8081";
-// export const TRADINGVIEW_WEB_URI = `http://xxx_your_deployement_domain_xxx`;
-
-
-
 export const CHECK_EMAIL = `${BASE_URL}/auth/check-email`;
 export const EMAIL_LOGIN = `${BASE_URL}/auth/login`;
 export const REFRESH_TOKEN = `${BASE_URL}/auth/refresh-token`;

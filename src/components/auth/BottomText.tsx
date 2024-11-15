@@ -18,7 +18,7 @@ const BottomText = () => {
   return (
     <>
       <CustomText variant="h9" fontFamily={FONTS.Regular} style={styles.text}>
-        By proceeding. I accept Groww's{" "} <UnderlineText text="T&C" />.
+        By proceeding. I accept TaskTic's{" "} <UnderlineText text="T&C" />.
         <UnderlineText text="Privacy Policy" />
         .{" "}
         <UnderlineText text="Tariff Rates" />.

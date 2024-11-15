@@ -77,7 +77,7 @@ const ResetPin = () => {
           fontFamily={FONTS.Bold}
           style={{ marginTop: 10 }}
         >
-          Reset Groww PIN
+          Reset TaskTic PIN
         </CustomText>
 
         <CustomText style={styles.subText}>

@@ -7,39 +7,47 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 import { RFValue } from "react-native-responsive-fontsize";
 import { useTheme } from "@react-navigation/native";
 import UserAvatar from "./UserAvatar";
+import SettingsIcon from "../../assets/icons/settings.png";
 
 interface TabProps {
-  title: string;
+  userName: string;
 }
 
-const TabHeader: FC<TabProps> = ({ title }) => {
+const TabHeader: FC<TabProps> = ({ userName }) => {
   const { colors } = useTheme();
   return (
     <View style={styles.container}>
+<View style={styles.flexRowCenter}>
+  <UserAvatar />
+  <View style={styles.flexColumnCenter}>
+    {[ "Welcome", userName ].map((text, index) => (
+      <CustomText 
+        key={index} 
+        style={styles.textStyle} 
+      >
+        {text || "Abhishek"}
+      </CustomText>
+    ))}
+  </View>
+</View>
+
       <View style={styles.flexRowCenter}>
-        <Image source={Logo} style={styles.img} />
-        <CustomText fontFamily={FONTS.Medium} fontSize={RFValue(10)}>
-          {title}
-        </CustomText>
-      </View>
-      <View style={styles.flexRowCenter}>
-        <TouchableOpacity onPress={() => {}}>
+        {/* <TouchableOpacity onPress={() => {}}>
           <Icon
             name="search"
             color={colors.text}
             style={styles.icon}
             size={RFValue(18)}
           />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity onPress={() => {}}>
           <Icon
-            name="qr-code"
+            name="settings"
             color={colors.text}
             style={styles.icon}
             size={RFValue(18)}
           />
         </TouchableOpacity>
-        <UserAvatar />
       </View>
     </View>
   );
@@ -54,6 +62,10 @@ const styles = StyleSheet.create({
   icon: {
     marginHorizontal: 6,
   },
+  flexColumnCenter: {
+    alignItems: "center",
+    flexDirection: "column",
+  },
   container: {
     alignItems: "center",
     paddingHorizontal: RFValue(12),
@@ -64,6 +76,10 @@ const styles = StyleSheet.create({
     width: RFValue(24),
     height: RFValue(24),
     resizeMode: "cover",
+  },
+    textStyle: {
+    fontFamily: FONTS.Medium,
+    fontSize: RFValue(10),
   },
 });
 

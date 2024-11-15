@@ -10,7 +10,7 @@ export enum Colors {
   dark_border = "#484C56",
   dark_card = "#292929",
 
-  active_tab = "#808EEE",
+  active_tab = "#FFF",
   unactive_tab = "#7C7D8B",
 
   noti_card_dark = "#1b1b1b",

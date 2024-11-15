@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
   img: {
     borderRadius: 80,
     justifyContent: "center",
-    width: RFValue(25),
-    height: RFValue(25),
+    width: RFValue(40),
+    height: RFValue(40),
     alignItems: "center",
     resizeMode: "cover",
     marginLeft: 6,

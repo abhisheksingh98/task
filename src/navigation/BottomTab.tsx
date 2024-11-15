@@ -1,14 +1,16 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useTheme } from "@react-navigation/native";
 import { FC } from "react";
-import StockTab from "../screens/dashboard/StockTab";
-import MutualTab from "../screens/dashboard/MutualTab";
-import PayTab from "../screens/dashboard/PayTab";
+import HomeTab from "../screens/dashboard/HomeTab";
+import CalendarTab from "../screens/dashboard/CalendarTab";
+import GoalsTab from "../screens/dashboard/GoalsTab";
+import CommunityTab from "../screens/dashboard/CommunityTab";
+import ProgressTab from "../screens/dashboard/ProgressTab";
 import { RFValue } from "react-native-responsive-fontsize";
 import { Platform } from "react-native";
 import { Colors } from "../constants/Colors";
 import { FONTS } from "../constants/Fonts";
-import { MutualTabIcon, PayTabIcon, StockTabIcon } from "./TabIcon";
+import { CalendarTabIcon, GoalsTabIcon, HomeTabIcon, CommunityTabIcon, ProgressTabIcon } from "./TabIcon";
 
 const Tab = createBottomTabNavigator();
 
@@ -34,21 +36,29 @@ const BottomTab: FC = () => {
           textAlign: "center",
         },
         tabBarIcon: ({ focused }) => {
-          if (route.name === "Stocks") {
-            return <StockTabIcon focused={focused} />;
+          if (route.name === "Home") {
+            return <HomeTabIcon focused={focused} />;
           }
-          if (route.name === "Mutual Funds") {
-            return <MutualTabIcon focused={focused} />;
+          if (route.name === "Calendar") {
+            return <CalendarTabIcon focused={focused} />;
           }
-          if (route.name === "Pay") {
-            return <PayTabIcon focused={focused} />;
+          if (route.name === "Goals") {
+            return <GoalsTabIcon focused={focused} />;
+          }
+          if (route.name === "Community") {
+            return <CommunityTabIcon focused={focused} />;
+          }
+          if (route.name === "Progress") {
+            return <ProgressTabIcon focused={focused} />;
           }
         },
       })}
     >
-      <Tab.Screen name="Stocks" component={StockTab} />
-      <Tab.Screen name="Mutual Funds" component={MutualTab} />
-      <Tab.Screen name="Pay" component={PayTab} />
+      <Tab.Screen name="Home" component={HomeTab} />
+      <Tab.Screen name="Calendar" component={CalendarTab} />
+      <Tab.Screen name="Goals" component={GoalsTab} />
+      <Tab.Screen name="Community" component={CommunityTab} />
+      <Tab.Screen name="Progress" component={ProgressTab} />
     </Tab.Navigator>
   );
 };
